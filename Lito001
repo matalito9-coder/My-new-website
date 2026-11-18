@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maya Reyes — Aspiring Web Developer</title>
+  <meta name="description" content="Portfolio website ni Maya Reyes: isang simpleng sample website na puwede mong i-host nang libre." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="badge">Libreng sample website</p>
+    <h1>Kamusta, ako si Maya!</h1>
+    <p class="tagline">Aspiring web developer mula sa Davao. Ito ang una kong website — naka-host nang <strong>libre</strong>.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Tingnan ang projects</a>
+      <a class="btn ghost" href="#contact">Kontakin ako</a>
+    </div>
+  </header>
+/* Sample website para sa libreng hosting guide.
+   Puwede mong baguhin ang kulay, text, at layout — sa iyo ito! */
+
+:root {
+  --blue: #2457e6;
+  --purple: #7c3aed;
+  --ink: #0f172a;
+  --muted: #475569;
+  --paper: #ffffff;
+  --wash: #eef2ff;
+  --line: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f0ff 60%, #eef2ff 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+  color: var(--muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn.primary { background: var(--blue); color: #fff; }
+.btn.ghost { background: #fff; color: var(--blue); border: 2px solid var(--blue); }
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.card h2 { margin-top: 0; color: var(--blue); }
+.card h3 { margin-bottom: 0.25rem; }
+.card p { color: var(--muted); }
+
+.skills {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills li {
+  background: var(--wash);
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+}
+
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+.projects article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fbfdff;
+}
+
+.email {
+  font-weight: 700;
+  color: var(--purple) !important;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+  <main>
+    <section id="about" class="card">
+      <h2>Tungkol sa akin</h2>
+      <p>Estudyante ako na mahilig gumawa ng websites. Natututo pa lang ako ng HTML at CSS, at ang page na ito ang practice project ko. Kung nabuksan mo ito online, ibig sabihin gumana ang libreng hosting!</p>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>GitHub Pages</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Mga project ko</h2>
+      <div class="projects">
+        <article>
+          <h3>School project site</h3>
+          <p>Website para sa class requirement namin. Na-deploy in 10 minutes.</p>
+        </article>
+        <article>
+          <h3>Family business page</h3>
+          <p>Simpleng landing page para sa sari-sari store ni Mama.</p>
+        </article>
+        <article>
+          <h3>Blog layout practice</h3>
+          <p>Experiment sa typography at mobile-first design.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Makipag-ugnayan</h2>
+      <p>Gusto mo ring matutong mag-host nang libre? Palitan mo ang section na ito ng sarili mong contact details.</p>
+      <p class="email">hello@example.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ginawa nang may ☕ sa Pilipinas · Sample project para sa libreng hosting guide</p>
+  </footer>
+</body>
+</html>
